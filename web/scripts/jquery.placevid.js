@@ -1,7 +1,7 @@
 /*global jQuery */
 /*jshint multistr:true browser:true */
 /*!
-* placeVideo 1.0
+* placevid 1.0
 *
 * Copyright 2013, Sam Beckham - http://www.sambeckham.com
 *
@@ -12,7 +12,7 @@
 
     'use strict';
 
-    $.fn.placeVideo = function(options) {
+    $.fn.placevid = function(options) {
 
         options = options || {};
         var video = {},
@@ -44,10 +44,19 @@
                     video.width = getProperty('width');
                     video.height = getProperty('height');
                     video.classes = getProperty('classes', 'class');
-                    var embedCode = '<iframe ' + video.url + video.width + video.height + video.classes + 'frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
-                    $(element).replaceWith(embedCode);
+                    video.embedCode = '<iframe ' + video.url + video.width + video.height + video.classes + 'frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
+                    $(element).replaceWith(video.embedCode);
                 }
             });
     };
 
 })(jQuery);
+
+/*
+
+TODO:
+[ ] Add color functionality
+[ ] Add autoplay functionality
+[ ] Speed up the default video / add image placeholder whilst loading
+
+*/
