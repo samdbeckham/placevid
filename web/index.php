@@ -1,24 +1,17 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Vagrant works man</title>
-	<style type="text/css">
-		body{
-			width: 100%;
-			max-width: 500px;
-			text-align: center;
-			margin: 0 auto;
-		}
-		
-		img{
-			max-width: 100%;
-		}
-	</style>
+	<title>Place Video - the video placeholder plugin</title>
 </head>
 <body>
-	<h1>Vagrant is running</h1>
-	<p>You can delete this and start adding in your own files now.</p>
-	<img src="http://1.bp.blogspot.com/-Na_OV_VJlQE/Tdl7Rwqe6OI/AAAAAAAABpo/ryRr5hI63Ho/s1600/fuck-yeah.jpg" />
+	<h1>Testing</h1>
+	<div class="placeVideo" data-width="900" data-height="600" data-keyword="sausages"></div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="/scripts/jquery.placeVideo.js"></script>
+	<script>
+		$(".placeVideo").placeVideo();
+	</script>
 </body>
 </html>
